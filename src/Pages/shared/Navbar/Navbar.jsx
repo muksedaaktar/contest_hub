@@ -18,9 +18,11 @@ const Navbar = () => {
                <li><NavLink to="/item3" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Extra Section</NavLink></li>
              </ul>
            </div>
-           <div className='flex gap-2'>
-            <img className='h-[50px] w-[50px] rounded-2xl' src={logo} alt="" />
-            <a className="text-4xl text-blue-500 font-extrabold"><i>Con<span className='text-orange-400'>T</span>est<span className='text-orange-400'>Hub</span></i></a>
+           <div className='flex gap-2 items-center mb-2'>
+           <img className='w-14 h-14 rounded-2xl' src={logo} alt="Logo" />
+           <a className="text-2xl md:text-4xl text-blue-500 font-extrabold">
+           <i>Con<span className='text-orange-400'>T</span>est<span className='text-orange-400'>Hub</span></i>
+           </a>
            </div>
          </div>
 
@@ -34,13 +36,13 @@ const Navbar = () => {
          <div className="navbar-end flex flex-col sm:flex-row gap-2">
   <NavLink 
     to="/login" 
-    className="btn bg-orange-400 text-white w-full sm:w-auto rounded-lg shadow-md hover:bg-orange-600 transition"
+    className="btn bg-orange-400 text-white  rounded-lg shadow-md hover:bg-orange-600 transition"
   >
     Login
   </NavLink>
   <NavLink 
     to="/registration" 
-    className="btn bg-orange-400 text-white w-full sm:w-auto rounded-lg shadow-md hover:bg-orange-600 transition"
+    className="btn bg-orange-400 text-white  rounded-lg shadow-md hover:bg-orange-600 transition"
   >
     Register
   </NavLink>

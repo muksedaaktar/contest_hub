@@ -11,11 +11,11 @@ const Footer = () => {
                 <aside>
                     <div className='flex gap-2 items-center mb-2'>
                         <img className='w-14 h-14 rounded-2xl' src={logo} alt="Logo" />
-                        <a className="text-3xl md:text-4xl text-blue-500 font-extrabold">
-                            Con<span className='text-orange-400'>T</span>est<span className='text-orange-400'>Hub</span>
+                        <a className="text-2xl md:text-4xl text-blue-500 font-extrabold">
+                            <i>Con<span className='text-orange-400'>T</span>est<span className='text-orange-400'>Hub</span></i>
                         </a>
                     </div>
-                    <p>
+                    <p className='text-3xl font-bold'>
                         Grow yourself<span className='text-blue-400 font-extrabold text-4xl'>!</span><br />
                         Play with your brain.
                     </p>
