@@ -4,11 +4,13 @@ import Footer from '../Pages/shared/Footer/Footer';
 import Navbar from '../Pages/shared/Navbar/Navbar';
 
 
+
 const RootLayout = () => {
     return (
         <div>
             <Navbar />
             <Outlet />
+           
             <Footer />
         </div>
     );
