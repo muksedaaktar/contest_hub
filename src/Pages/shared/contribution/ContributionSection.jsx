@@ -61,14 +61,7 @@ const ContributionSection = () => {
               whileHover={{ scale: 1.05 }}
               className="relative bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-md cursor-pointer"
             >
-              {/* Floating coin */}
-              <motion.span
-                className="absolute -top-3 right-3 text-yellow-400 text-xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 1.2 }}
-              >
-                💰
-              </motion.span>
+              
 
               <h1 className="text-3xl flex justify-center">📄</h1>
               <h1 className="text-xl font-semibold">Total Blogs</h1>
