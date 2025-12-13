@@ -1,131 +1,95 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
+/* Parent container for stagger */
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.3, 
+      staggerChildren: 0.25,
     },
   },
 };
 
+/* Card animation (like form fields) */
 const cardVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 100 },
+    transition: { type: "spring", stiffness: 90 },
   },
 };
 
 const ContributionSection = () => {
   return (
-    <div className="bg-base-200">
-      <div className="container mx-auto px-5 pb-16 pt-10">
-        {/* Title */}
-        <div className="text-center mb-8">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-2xl font-semibold"
-          >
-            Our Contribution
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm max-w-[560px] mx-auto text-[#474747]"
-          >
-            Our contribution are the cornerstone of our success, driving our
-            commitment to excellence and continuous improvement in all areas.
-          </motion.p>
-        </div>
+    <section className="bg-base-200 py-16">
+      <div className="container mx-auto px-5">
 
-        {/* Cards + Image */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-16">
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
+          <h1 className="text-2xl font-semibold">Our Contribution</h1>
+          <p className="text-sm max-w-[560px] mx-auto text-[#474747] mt-2">
+            Our contribution are the cornerstone of our success, driving our
+            commitment to excellence and continuous improvement.
+          </p>
+        </motion.div>
+
+        {/* Content */}
+        <div className="flex flex-col md:flex-row items-center gap-16">
+
           {/* Cards */}
           <motion.div
             className="w-full md:w-1/2 grid grid-cols-2 gap-5"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
-            {/* Card 1: Total Blogs */}
-            <motion.div
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              className="relative bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-md cursor-pointer"
-            >
-              
-
-              <h1 className="text-3xl flex justify-center">📄</h1>
-              <h1 className="text-xl font-semibold">Total Blogs</h1>
-              <p className="text-2xl lg:text-4xl font-bold">
-                <span>16,000</span> <span>+</span>
-              </p>
-            </motion.div>
-
-            {/* Card 2: Verified Users */}
-            <motion.div
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-md cursor-pointer"
-            >
-              <h1 className="text-3xl flex justify-center">👥</h1>
-              <h1 className="text-xl font-semibold">Verified Users</h1>
-              <p className="text-2xl lg:text-4xl font-bold">
-                <span>3,100</span> <span>+</span>
-              </p>
-            </motion.div>
-
-            {/* Card 3: Positive Reviews */}
-            <motion.div
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-md cursor-pointer"
-            >
-              <h1 className="text-3xl flex justify-center">⭐</h1>
-              <h1 className="text-xl font-semibold">Positive Reviews</h1>
-              <p className="text-2xl lg:text-4xl font-bold">
-                <span>8,300</span> <span>+</span>
-              </p>
-            </motion.div>
-
-            {/* Card 4: Daily Post */}
-            <motion.div
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-md cursor-pointer"
-            >
-              <h1 className="text-3xl flex justify-center">📝</h1>
-              <h1 className="text-xl font-semibold">Daily Post</h1>
-              <p className="text-2xl lg:text-4xl font-bold">
-                <span>200</span> <span>+</span>
-              </p>
-            </motion.div>
+            {[
+              { icon: "📄", title: "Total Blogs", value: "16,000+" },
+              { icon: "👥", title: "Verified Users", value: "3,100+" },
+              { icon: "⭐", title: "Positive Reviews", value: "8,300+" },
+              { icon: "📝", title: "Daily Post", value: "200+" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={cardVariants}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-6 space-y-3 text-blue-500 text-center hover:bg-blue-500 hover:text-white duration-200 rounded-xl cursor-pointer shadow-md"
+              >
+                <h1 className="text-3xl flex justify-center">{item.icon}</h1>
+                <h1 className="text-xl font-semibold">{item.title}</h1>
+                <p className="text-2xl lg:text-4xl font-bold">{item.value}</p>
+              </motion.div>
+            ))}
           </motion.div>
 
-          {/* Image */}
+          {/* Image (same style as login/register) */}
           <motion.div
             className="w-full md:w-1/2"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <img
               src="https://i.postimg.cc/3xDLjYmW/1521651669993.jpg"
               alt="Contribution"
-              className="rounded-lg"
+              className="rounded-2xl shadow-xl"
             />
           </motion.div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
