@@ -9,6 +9,7 @@ import ContestsDetails from "../Pages/contestsDetails/ContestsDetails";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 import ExtraSection from "../Pages/Extra/ExtraSection";
 import Profile from "../Pages/profile/Profile";
+import EditProfile from "../Pages/profile/EditProfile";
 
 export const router = createBrowserRouter([
   {
@@ -32,13 +33,22 @@ export const router = createBrowserRouter([
         element : <ExtraSection />
       },
       {
-  path: "/profile",
-  element: (
-    <Privateroute>
-      <Profile />
-    </Privateroute>
-  ),
-  },
+       path: "/profile",
+       element: (
+       <Privateroute>
+       <Profile />
+      </Privateroute>
+       ),
+       },
+
+       {
+       path: "/edit-profile",
+       element: (
+       <Privateroute>
+        <EditProfile />
+       </Privateroute>
+        ),
+       },
 
       {
         path: "contest/:id",

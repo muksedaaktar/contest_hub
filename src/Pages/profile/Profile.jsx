@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
+   
+
 const Dashboard = () => {
+    const navigate = useNavigate();
   return (
     <section className="min-h-screen bg-linear-to-br from-blue-50 to-orange-50 p-6">
       <div className="max-w-7xl mx-auto">
+     
 
         {/* Header */}
         <motion.div
@@ -63,9 +69,12 @@ const Dashboard = () => {
             <h2 className="text-xl font-bold">John Doe</h2>
             <p className="text-gray-500 mb-4">Contest Enthusiast</p>
 
-            <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded-full hover:bg-blue-500 hover:text-white transition">
-              Edit Profile
-            </button>
+            <button
+            onClick={() => navigate("/edit-profile")}
+           className="border border-blue-500 text-blue-500 px-4 py-2 rounded-full hover:bg-blue-500 hover:text-white transition"
+              >
+          Edit Profile
+          </button>
           </motion.div>
 
           {/* Recent Contests */}
