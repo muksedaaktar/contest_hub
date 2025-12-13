@@ -5,6 +5,9 @@ import AuthLayout from "../layOuts/AuthLayout";
 import Login from "../Pages/Auth/Login/Login";
 import Register from "../Pages/Auth/Register/Register";
 import AllContests from "../Pages/allContests/AllContests";
+import Privateroute from "../privateRoute/Privateroute";
+import ContestsDetails from "../Pages/contestsDetails/ContestsDetails";
+
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +37,17 @@ export const router = createBrowserRouter([
 
         path : '/all-contests',
         element : <AllContests />
-      }
+      },
+      {
+  path: "/contest/:id",
+  element: (
+    <Privateroute>
+      <ContestsDetails />
+    </Privateroute>
+    
+  )
+}
+
     ]
   }
 

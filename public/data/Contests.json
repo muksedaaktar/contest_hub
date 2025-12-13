@@ -6,7 +6,8 @@
     "image": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 850,
     "short_description": "Build a modern React app using hooks and context...",
-    "details": "Create a fully functional React app with routing, state management, and responsive design...",
+    "details": "Create a fully functional React app with routing, state management, and responsive design. Use functional components, hooks, and context API. Apply best practices in folder structure and code readability. Implement dynamic data fetching and state updates.",
+    "task": "Build a React app with at least three pages: Home, About, and Dashboard. Use useState and useEffect hooks to manage state and API calls. Implement a dark/light theme toggle. Submit a GitHub repository link of your project.",
     "prize": "$500",
     "winner": null,
     "deadline": "2025-12-31T23:59:59"
@@ -18,7 +19,8 @@
     "image": "https://media.istockphoto.com/id/182190423/photo/flowchart-3d.jpg?s=2048x2048&w=is&k=20&c=qK39dCabWLi4IOe-BhmJvmSrs5mSNgOHCoaXH2LCaKw=",
     "participants": 450,
     "short_description": "Test your algorithm skills in a series of challenging quizzes...",
-    "details": "Participate in 10 algorithm quizzes covering sorting, searching, and dynamic programming...",
+    "details": "Participate in 10 algorithm quizzes covering sorting, searching, and dynamic programming. Each quiz has multiple-choice questions with varying difficulty. Analyze time complexity for each problem. Track your score and improve problem-solving speed.",
+    "task": "Solve all 10 quizzes and submit screenshots of your results. Each quiz must be completed under the time limit. Document the algorithm you used for each problem. Submit a summary of total score and time taken.",
     "prize": "$300",
     "winner": null,
     "deadline": "2025-11-30T23:59:59"
@@ -30,7 +32,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1724800663657-3e57bf4f622c?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 720,
     "short_description": "Solve complex math problems in limited time...",
-    "details": "Compete in algebra, geometry, and combinatorics challenges...",
+    "details": "Compete in algebra, geometry, and combinatorics challenges. Solve time-bound problems with accuracy. Show all steps of your calculations. Demonstrate clear reasoning and logical thinking.",
+    "task": "Solve 20 math problems provided in PDF format. Each problem should have a complete solution with steps. Scan or photograph your solutions and submit as a single PDF. Ensure clarity and legibility of work.",
     "prize": "$400",
     "winner": null,
     "deadline": "2025-12-20T23:59:59"
@@ -42,7 +45,8 @@
     "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
     "participants": 1200,
     "short_description": "Capture the essence of nature in a single photo...",
-    "details": "Submit your best nature photographs showing landscapes, wildlife, or plants...",
+    "details": "Submit your best nature photographs showing landscapes, wildlife, or plants. Focus on lighting, composition, and creativity. Use editing tools if necessary. Ensure originality and high resolution.",
+    "task": "Capture at least 3 high-quality nature photographs. Each photo should highlight different aspects: wildlife, landscape, and flora. Provide a short caption describing each photo. Submit as a zipped folder or Google Drive link.",
     "prize": "$600",
     "winner": null,
     "deadline": "2025-12-15T23:59:59"
@@ -54,7 +58,8 @@
     "image": "https://images.unsplash.com/photo-1683157580095-1a5ddd7a2113?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 300,
     "short_description": "Show your creativity on canvas...",
-    "details": "Draw any subject using pencil, ink, or digital tools. Focus on originality...",
+    "details": "Draw any subject using pencil, ink, or digital tools. Focus on originality and composition. Apply shading and perspective techniques. Ensure high-quality submission in digital format.",
+    "task": "Create 2 original drawings. One in pencil/ink and one digital. Scan or export digital drawings. Submit both via Google Drive or email link. Include a short description for each drawing.",
     "prize": "$250",
     "winner": null,
     "deadline": "2025-12-05T23:59:59"
@@ -66,7 +71,8 @@
     "image": "https://images.unsplash.com/photo-1724166551426-77aa7328d053?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 530,
     "short_description": "Deep dive into React hooks and context APIs...",
-    "details": "Build a project demonstrating useReducer, useContext, and custom hooks...",
+    "details": "Build a project demonstrating useReducer, useContext, and custom hooks. Implement dynamic state updates and complex forms. Integrate API calls with error handling. Ensure responsive and reusable component design.",
+    "task": "Create a React project using useReducer and useContext. Include at least 2 custom hooks. Implement API fetching with error handling. Submit GitHub repository link with instructions.",
     "prize": "$450",
     "winner": null,
     "deadline": "2025-12-28T23:59:59"
@@ -78,7 +84,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 600,
     "short_description": "Test your general knowledge skills across various topics...",
-    "details": "Participate in 15 rounds of quizzes covering history, science, sports, and culture...",
+    "details": "Participate in 15 rounds of quizzes covering history, science, sports, and culture. Each round has multiple-choice questions. Track your answers and scores. Improve your accuracy with time-bound quizzes.",
+    "task": "Complete all 15 rounds and submit screenshots of your answers. Track time and score for each round. Summarize your best answers. Submit a PDF summary of scores and answers.",
     "prize": "$350",
     "winner": null,
     "deadline": "2025-12-10T23:59:59"
@@ -90,7 +97,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1718169446816-77b85ce754dd?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 480,
     "short_description": "Solve a set of challenging math puzzles...",
-    "details": "Time-bound puzzles covering algebra, logic, and number theory...",
+    "details": "Time-bound puzzles covering algebra, logic, and number theory. Solve each problem with clear reasoning. Include all calculation steps. Ensure accuracy and completeness.",
+    "task": "Solve 10 math puzzles in PDF format. Document each solution step-by-step. Scan and submit as a single PDF. Provide a short explanation for each solution.",
     "prize": "$400",
     "winner": null,
     "deadline": "2025-12-18T23:59:59"
@@ -102,7 +110,8 @@
     "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
     "participants": 950,
     "short_description": "Capture beautiful landscapes and sceneries...",
-    "details": "Photos should show natural sceneries, mountains, rivers, or sunsets...",
+    "details": "Photos should show natural sceneries, mountains, rivers, or sunsets. Focus on composition and lighting. Submit high-resolution photos. Avoid heavy editing and ensure originality.",
+    "task": "Capture 3-5 landscape photos highlighting mountains, rivers, and sunsets. Provide captions for each. Submit as zipped folder or Google Drive link.",
     "prize": "$500",
     "winner": null,
     "deadline": "2025-12-22T23:59:59"
@@ -114,11 +123,13 @@
     "image": "https://plus.unsplash.com/premium_photo-1673968280732-fba5dcca851f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 350,
     "short_description": "Showcase your digital drawing skills...",
-    "details": "Create an original digital artwork using Photoshop, Illustrator, or Procreate...",
+    "details": "Create an original digital artwork using Photoshop, Illustrator, or Procreate. Focus on color theory and composition. Submit high-resolution files. Showcase originality and creativity.",
+    "task": "Submit 1-2 digital artworks in JPEG or PNG. Provide a short description of the inspiration and tools used. Submit via Google Drive link.",
     "prize": "$300",
     "winner": null,
     "deadline": "2025-12-12T23:59:59"
   },
+
   
   {
     "id": 11,
@@ -127,7 +138,8 @@
     "image": "https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 400,
     "short_description": "Test your JS skills by solving real-world problems...",
-    "details": "Create interactive web applications using vanilla JS or frameworks...",
+    "details": "Create interactive web applications using vanilla JS or frameworks. Focus on DOM manipulation, events, and data handling. Ensure responsiveness and cross-browser compatibility. Write clean, reusable, and commented code.",
+    "task": "Build a small JS app implementing at least 3 interactive features. Use ES6+ syntax and modular code structure. Submit GitHub repository link with readme explaining features.",
     "prize": "$350",
     "winner": null,
     "deadline": "2025-12-25T23:59:59"
@@ -139,7 +151,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1721080251127-76315300cc5c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 320,
     "short_description": "Show your creativity in web design and CSS effects...",
-    "details": "Design responsive, creative, and modern UI components...",
+    "details": "Design responsive, creative, and modern UI components. Apply animations, hover effects, and transitions. Follow best practices in accessibility and readability. Test across devices for consistent design.",
+    "task": "Create a webpage with at least 3 sections demonstrating animations, transitions, and hover effects. Submit code via GitHub repository. Include screenshots of mobile and desktop views.",
     "prize": "$250",
     "winner": null,
     "deadline": "2025-12-18T23:59:59"
@@ -151,7 +164,8 @@
     "image": "https://images.unsplash.com/photo-1649180556628-9ba704115795?q=80&w=1162&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 510,
     "short_description": "Solve Python challenges ranging from beginner to advanced...",
-    "details": "Implement algorithms, data structures, and small projects in Python...",
+    "details": "Implement algorithms, data structures, and small projects in Python. Focus on problem-solving efficiency. Write readable and well-commented code. Test all programs thoroughly before submission.",
+    "task": "Complete 5 Python coding challenges of varying difficulty. Submit a ZIP file with code files and test results. Include a README explaining your approach for each challenge.",
     "prize": "$400",
     "winner": null,
     "deadline": "2025-12-27T23:59:59"
@@ -163,7 +177,8 @@
     "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
     "participants": 680,
     "short_description": "Capture the essence of city life in a photo...",
-    "details": "Submit creative photos depicting urban streets, buildings, and people...",
+    "details": "Submit creative photos depicting urban streets, buildings, and people. Pay attention to perspective, lighting, and composition. Focus on capturing daily urban moments. High-resolution and originality are required.",
+    "task": "Take 3 high-quality urban photographs highlighting different city aspects. Provide captions explaining the scene. Submit images via Google Drive or ZIP link.",
     "prize": "$500",
     "winner": null,
     "deadline": "2025-12-21T23:59:59"
@@ -175,7 +190,8 @@
     "image": "https://media.istockphoto.com/id/1454854245/photo/a-graphic-designer-develops-a-logo-for-a-brand-the-illustrator-draws-sketches-on-paper.jpg?s=2048x2048&w=is&k=20&c=mvq8EkL57Vd6ATd7MPi7GQur7zhVmAcLLhXZQKnVIKc=",
     "participants": 220,
     "short_description": "Design an original logo for a fictional company...",
-    "details": "Create a memorable and professional logo with vector tools...",
+    "details": "Create a memorable and professional logo with vector tools. Focus on simplicity, originality, and brand representation. Deliver in high-resolution and scalable formats. Include design rationale in submission.",
+    "task": "Design 1 original logo using Illustrator or Figma. Submit source files and PNG/JPG. Include a short explanation of design choices and color scheme.",
     "prize": "$200",
     "winner": null,
     "deadline": "2025-12-16T23:59:59"
@@ -187,7 +203,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1726666269043-fb16e54646d0?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 750,
     "short_description": "Build AI-powered apps in 48 hours...",
-    "details": "Develop AI or ML-based projects using Python, TensorFlow, or PyTorch...",
+    "details": "Develop AI or ML-based projects using Python, TensorFlow, or PyTorch. Implement predictive models or intelligent systems. Work in a team and follow best coding practices. Document your workflow and results.",
+    "task": "Develop a mini AI project within 48 hours. Submit GitHub repo link with code and README explaining the model, dataset, and results. Include screenshots of working app.",
     "prize": "$700",
     "winner": null,
     "deadline": "2025-12-30T23:59:59"
@@ -199,7 +216,8 @@
     "image": "https://plus.unsplash.com/premium_photo-1684444605542-93725082d214?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 390,
     "short_description": "Showcase your storytelling skills in short stories...",
-    "details": "Write an original short story, poem, or essay within 2000 words...",
+    "details": "Write an original short story, poem, or essay within 2000 words. Focus on plot, characters, and creativity. Use proper grammar and formatting. Submit as a PDF document with title page.",
+    "task": "Write a 1500–2000 word short story. Submit as PDF with title, author, and short synopsis. Ensure originality and proper formatting.",
     "prize": "$300",
     "winner": null,
     "deadline": "2025-12-23T23:59:59"
@@ -211,7 +229,8 @@
     "image": "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 450,
     "short_description": "Build a mobile app from scratch in 1 week...",
-    "details": "Create a fully functional Android or iOS app with UI and backend...",
+    "details": "Create a fully functional Android or iOS app with UI and backend. Implement essential features like login, navigation, and data storage. Test app for bugs and usability. Submit APK/IPA files and source code.",
+    "task": "Develop a mobile app with at least 3 screens and basic functionality. Submit source code and installation file. Include a short guide for usage.",
     "prize": "$600",
     "winner": null,
     "deadline": "2025-12-29T23:59:59"
@@ -223,7 +242,8 @@
     "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
     "participants": 570,
     "short_description": "Capture stunning photos of wildlife in their natural habitat...",
-    "details": "Submit photos of animals, birds, and insects in the wild...",
+    "details": "Submit photos of animals, birds, and insects in the wild. Focus on composition, lighting, and clarity. Avoid editing that misrepresents the subject. Ensure originality and high resolution.",
+    "task": "Capture at least 3 wildlife photographs. Include captions describing the subject and location. Submit via Google Drive or ZIP folder.",
     "prize": "$550",
     "winner": null,
     "deadline": "2025-12-26T23:59:59"
@@ -235,58 +255,64 @@
     "image": "https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "participants": 480,
     "short_description": "Analyze datasets and build predictive models...",
-    "details": "Participate in challenges including regression, classification, and clustering tasks...",
+    "details": "Participate in challenges including regression, classification, and clustering tasks. Work with real-world datasets. Document analysis steps and results. Focus on accuracy and interpretability of models.",
+    "task": "Analyze the provided dataset using Python or R. Build at least two predictive models. Submit Jupyter notebooks or scripts along with report summarizing findings.",
     "prize": "$500",
     "winner": null,
     "deadline": "2025-12-31T23:59:59"
   },
   {
-  "id": 21,
-  "name": "UI/UX Design Challenge",
-  "type": "Design",
-  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
-  "participants": 640,
-  "short_description": "Design a clean and user-friendly UI/UX for a modern web app...",
-  "details": "Create wireframes and high-fidelity designs for a web or mobile application focusing on usability and accessibility...",
-  "prize": "$450",
-  "winner": null,
-  "deadline": "2025-12-24T23:59:59"
- },
-  {
-  "id": 22,
-  "name": "Backend API Development Contest",
-  "type": "Coding",
-  "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
-  "participants": 720,
-  "short_description": "Build a secure and scalable REST API...",
-  "details": "Develop RESTful APIs using Node.js, Express, and MongoDB with authentication and authorization...",
-  "prize": "$600",
-  "winner": null,
-  "deadline": "2025-12-29T23:59:59"
+    "id": 21,
+    "name": "UI/UX Design Challenge",
+    "type": "Design",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+    "participants": 640,
+    "short_description": "Design a clean and user-friendly UI/UX for a modern web app...",
+    "details": "Create wireframes and high-fidelity designs for a web or mobile application. Focus on usability, accessibility, and visual hierarchy. Test designs with feedback. Ensure consistent color schemes and typography.",
+    "task": "Design 3 screens of a web or mobile app using Figma or Sketch. Submit design files along with brief explanation of UX decisions. Include navigation flow and user interactions.",
+    "prize": "$450",
+    "winner": null,
+    "deadline": "2025-12-24T23:59:59"
   },
   {
-  "id": 23,
-  "name": "Frontend Performance Optimization Challenge",
-  "type": "Coding",
-  "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
-  "participants": 810,
-  "short_description": "Optimize frontend performance and improve website speed...",
-  "details": "Improve loading time, reduce bundle size, and optimize rendering using modern frontend techniques...",
-  "prize": "$650",
-  "winner": null,
-  "deadline": "2025-12-27T23:59:59"
-},
- {
-  "id": 24,
-  "name": "Short Film Making Contest",
-  "type": "Creative",
-  "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
-  "participants": 560,
-  "short_description": "Create an original short film with a compelling story...",
-  "details": "Produce a short film (5–10 minutes) focusing on storytelling, cinematography, and creativity...",
-  "prize": "$500",
-  "winner": null,
-  "deadline": "2025-12-26T23:59:59"
- }
+    "id": 22,
+    "name": "Backend API Development Contest",
+    "type": "Coding",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+    "participants": 720,
+    "short_description": "Build a secure and scalable REST API...",
+    "details": "Develop RESTful APIs using Node.js, Express, and MongoDB with authentication and authorization. Implement CRUD operations. Ensure proper error handling and validation. Test endpoints thoroughly.",
+    "task": "Build a REST API for a small app. Implement authentication and CRUD for a resource. Submit GitHub repository with instructions and Postman collection for testing.",
+    "prize": "$600",
+    "winner": null,
+    "deadline": "2025-12-29T23:59:59"
+  },
+  {
+    "id": 23,
+    "name": "Frontend Performance Optimization Challenge",
+    "type": "Coding",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+    "participants": 810,
+    "short_description": "Optimize frontend performance and improve website speed...",
+    "details": "Improve loading time, reduce bundle size, and optimize rendering using modern frontend techniques. Implement lazy loading and code splitting. Monitor performance metrics. Ensure responsive design remains intact.",
+    "task": "Take an existing frontend project. Apply optimization techniques like lazy loading, code splitting, and image compression. Submit optimized project and performance report via GitHub.",
+    "prize": "$650",
+    "winner": null,
+    "deadline": "2025-12-27T23:59:59"
+  },
+  {
+    "id": 24,
+    "name": "Short Film Making Contest",
+    "type": "Creative",
+    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+    "participants": 560,
+    "short_description": "Create an original short film with a compelling story...",
+    "details": "Produce a short film (5–10 minutes) focusing on storytelling, cinematography, and creativity. Plan the storyboard and script. Ensure good lighting and sound quality. Edit and finalize professionally.",
+    "task": "Create a 5–10 minute short film. Submit video file via Google Drive or Vimeo link. Include script, storyboard, and production notes. Ensure originality and quality.",
+    "prize": "$500",
+    "winner": null,
+    "deadline": "2025-12-26T23:59:59"
+  }
+
 
 ]
