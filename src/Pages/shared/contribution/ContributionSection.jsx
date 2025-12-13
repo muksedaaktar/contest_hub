@@ -11,7 +11,7 @@ const containerVariants = {
   },
 };
 
-/* Card animation (like form fields) */
+/* Card animation  */
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: {
@@ -72,7 +72,7 @@ const ContributionSection = () => {
             ))}
           </motion.div>
 
-          {/* Image (same style as login/register) */}
+          {/* Image */}
           <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 60 }}
