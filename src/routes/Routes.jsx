@@ -1,54 +1,39 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layOuts/RootLayout";
 import Home from "../Pages/Home/Home/Home";
-import AuthLayout from "../layOuts/AuthLayout";
 import Login from "../Pages/Auth/Login/Login";
 import Register from "../Pages/Auth/Register/Register";
 import AllContests from "../Pages/allContests/AllContests";
 import Privateroute from "../privateRoute/Privateroute";
 import ContestsDetails from "../Pages/contestsDetails/ContestsDetails";
-
+import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,   
+    element: <RootLayout />,
     children: [
+      { index: true,
+         element: <Home /> 
+      },
+      { path: "login", 
+        element: <Login /> 
+      },
+      { path: "registration",
+         element: <Register /> 
+      },
+      { path: "all-contests", 
+        element: <AllContests />
+      },
       {
-        index: true,
-        element: <Home />,    
-      }
-    ]
+        path: "contest/:id",
+        element: (
+          <Privateroute>
+            <ContestsDetails />
+          </Privateroute>
+        ),
+      },
+      { path: "*", element: <NotFoundPage /> },
+    ],
   },
-
-  {
-    path: "/",
-    element: <AuthLayout />,
-    children: [
-      {
-        path : 'login',
-        element : <Login />
-      },
-      {
-        path: 'registration',
-        element : <Register />
-      },
-      {
-
-        path : '/all-contests',
-        element : <AllContests />
-      },
-      {
-  path: "/contest/:id",
-  element: (
-    <Privateroute>
-      <ContestsDetails />
-    </Privateroute>
-    
-  )
-}
-
-    ]
-  }
-
 ]);

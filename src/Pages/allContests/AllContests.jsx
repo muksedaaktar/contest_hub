@@ -2,6 +2,8 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
+const isLoggedIn = false; 
+
 const fetchContests = async () => {
   const res = await fetch("/data/Contests.json");
   if (!res.ok) throw new Error("Failed to fetch contests");
@@ -58,7 +60,11 @@ const AllContests = () => {
                 </p>
 
                 <button
-                  onClick={() => navigate(`/contest/${contest.id}`)}
+                  onClick={() =>
+                    isLoggedIn
+                      ? navigate(`/contest/${contest.id}`)
+                      : navigate("/login")
+                  }
                   className="bg-orange-400 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full transition"
                 >
                   View Details
