@@ -31,17 +31,19 @@ if (error) return <p className="text-center py-10">Error loading contests</p>;
 
 const contestsArray = Array.isArray(data) ? data : [];
 
-const sortedContests = [...contestsArray].sort(
-  (a, b) => (b.participants || 0) - (a.participants || 0)
-);
+const sortedContests = [...contestsArray]
+  .sort((a, b) => (b.participants || 0) - (a.participants || 0))
+  .slice(0, 6); 
+
 
 
   return (
     <section className="bg-base-200 py-16">
       <div className="container mx-auto px-5">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-4xl font-bold text-center text-blue-500 mb-4">
           Popular Contests
         </h2>
+        <p className="text-center mb-8 font-bold">Here we have some popular contests. If you show all of our contests, please click the button show all and enjoy with us.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedContests.map((contest) => (

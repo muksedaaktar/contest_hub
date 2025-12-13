@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import AuthLayout from "../layOuts/AuthLayout";
 import Login from "../Pages/Auth/Login/Login";
 import Register from "../Pages/Auth/Register/Register";
+import AllContests from "../Pages/allContests/AllContests";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
       {
         path: 'registration',
         element : <Register />
+      },
+      {
+
+        path : '/all-contests',
+        element : <AllContests />
       }
     ]
   }

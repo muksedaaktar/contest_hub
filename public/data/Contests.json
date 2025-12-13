@@ -239,7 +239,54 @@
     "prize": "$500",
     "winner": null,
     "deadline": "2025-12-31T23:59:59"
-  }
-
+  },
+  {
+  "id": 21,
+  "name": "UI/UX Design Challenge",
+  "type": "Design",
+  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+  "participants": 640,
+  "short_description": "Design a clean and user-friendly UI/UX for a modern web app...",
+  "details": "Create wireframes and high-fidelity designs for a web or mobile application focusing on usability and accessibility...",
+  "prize": "$450",
+  "winner": null,
+  "deadline": "2025-12-24T23:59:59"
+ },
+  {
+  "id": 22,
+  "name": "Backend API Development Contest",
+  "type": "Coding",
+  "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+  "participants": 720,
+  "short_description": "Build a secure and scalable REST API...",
+  "details": "Develop RESTful APIs using Node.js, Express, and MongoDB with authentication and authorization...",
+  "prize": "$600",
+  "winner": null,
+  "deadline": "2025-12-29T23:59:59"
+  },
+  {
+  "id": 23,
+  "name": "Frontend Performance Optimization Challenge",
+  "type": "Coding",
+  "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+  "participants": 810,
+  "short_description": "Optimize frontend performance and improve website speed...",
+  "details": "Improve loading time, reduce bundle size, and optimize rendering using modern frontend techniques...",
+  "prize": "$650",
+  "winner": null,
+  "deadline": "2025-12-27T23:59:59"
+},
+ {
+  "id": 24,
+  "name": "Short Film Making Contest",
+  "type": "Creative",
+  "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?crop=entropy&cs=tinysrgb&fit=max&h=400&w=600",
+  "participants": 560,
+  "short_description": "Create an original short film with a compelling story...",
+  "details": "Produce a short film (5–10 minutes) focusing on storytelling, cinematography, and creativity...",
+  "prize": "$500",
+  "winner": null,
+  "deadline": "2025-12-26T23:59:59"
+ }
 
 ]
