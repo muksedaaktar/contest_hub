@@ -1,8 +1,8 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/Authcontext";
 
-const isLoggedIn = false; 
 
 const fetchContests = async () => {
   const res = await fetch("/data/Contests.json");
@@ -12,6 +12,7 @@ const fetchContests = async () => {
 
 const AllContests = () => {
   const navigate = useNavigate();
+  const { user } = useAuth(); // get logged-in user
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["allContests"],
@@ -43,25 +44,20 @@ const AllContests = () => {
               />
 
               <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">
-                  {contest.name}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{contest.name}</h3>
 
                 <p className="text-gray-600 mb-3">
                   {contest.short_description?.slice(0, 80)}...
                 </p>
 
-                <p className="text-gray-500 mb-2">
-                  Type: {contest.type}
-                </p>
-
+                <p className="text-gray-500 mb-2">Type: {contest.type}</p>
                 <p className="text-gray-500 mb-4">
                   Participants: {contest.participants}
                 </p>
 
                 <button
                   onClick={() =>
-                    isLoggedIn
+                    user
                       ? navigate(`/contest/${contest.id}`)
                       : navigate("/login")
                   }
