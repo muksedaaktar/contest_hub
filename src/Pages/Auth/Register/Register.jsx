@@ -54,6 +54,15 @@ const Register = () => {
               />
             </div>
 
+            <div>
+             <label className="text-gray-700 font-semibold">Photo URL</label>
+               <input
+               type="text"
+               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                  placeholder="Enter your profile photo URL"
+                 />
+            </div>
+
               <div>
               <label className="text-gray-700 font-semibold">Password</label>
               <input
