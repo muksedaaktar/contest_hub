@@ -7,6 +7,7 @@ import AllContests from "../Pages/allContests/AllContests";
 import Privateroute from "../privateRoute/Privateroute";
 import ContestsDetails from "../Pages/contestsDetails/ContestsDetails";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
+import ExtraSection from "../Pages/Extra/ExtraSection";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       },
       { path: "all-contests", 
         element: <AllContests />
+      },
+      {
+        path: "extra",
+        element : <ExtraSection />
       },
       {
         path: "contest/:id",
