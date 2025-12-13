@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../../assets/logo.jpg'
+import logo from '../../../assets/winner.jpg'
 
 const Navbar = () => {
     return (
@@ -14,7 +14,7 @@ const Navbar = () => {
              </div>
              <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                <li><NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Home</NavLink></li>
-               <li><NavLink to="/parent" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
+               <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
                <li><NavLink to="/item3" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Extra Section</NavLink></li>
              </ul>
            </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
          <div className="navbar-center hidden lg:flex">
            <ul className="menu menu-horizontal px-1">
              <li><NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Home</NavLink></li>
-             <li><NavLink to="/all-contest" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
+             <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
              <li><NavLink to="/extra" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Extra Section</NavLink></li>
            </ul>
          </div>

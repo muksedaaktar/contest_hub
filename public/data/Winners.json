@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Alice Johnson",
+    "prize": "$500",
+    "contest": "React Frontend Challenge",
+    "photo": "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+  {
+    "name": "Bob Smith",
+    "prize": "$300",
+    "contest": "Algorithm Quiz Marathon",
+    "photo": "https://randomuser.me/api/portraits/men/45.jpg"
+  },
+  {
+    "name": "Catherine Lee",
+    "prize": "$600",
+    "contest": "Photography Contest: Nature",
+    "photo": "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    "name": "David Miller",
+    "prize": "$450",
+    "contest": "Advanced React Hooks Challenge",
+    "photo": "https://randomuser.me/api/portraits/men/18.jpg"
+  },
+  {
+    "name": "Emily Davis",
+    "prize": "$350",
+    "contest": "CSS Design Contest",
+    "photo": "https://randomuser.me/api/portraits/women/35.jpg"
+  }
+]
