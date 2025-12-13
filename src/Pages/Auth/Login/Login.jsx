@@ -1,9 +1,30 @@
 import { motion } from "framer-motion";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase/firebase.config";
 import { FcGoogle } from "react-icons/fc";
 
+
 const Login = () => {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, form.email, form.password);
+      navigate("/"); // redirect after login
+    } catch (error) {
+      console.error(error.message);
+      alert(error.message); // simple error alert
+    }
+  };
+
   return (
     <section className="w-full bg-base-200 py-16">
       <div className="container mx-auto px-5 flex flex-col lg:flex-row items-center gap-12">
@@ -37,14 +58,17 @@ const Login = () => {
           </p>
 
           {/* Form */}
-          <form className="space-y-5">
-
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label className="text-gray-700 font-semibold">Email</label>
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
                 placeholder="Enter your email"
+                required
               />
             </div>
 
@@ -52,8 +76,12 @@ const Login = () => {
               <label className="text-gray-700 font-semibold">Password</label>
               <input
                 type="password"
+                name="password"
+                value={form.password}
+                onChange={handleChange}
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
                 placeholder="Enter your password"
+                required
               />
             </div>
 
@@ -95,7 +123,7 @@ const Login = () => {
           <p className="text-center text-gray-600 mt-5">
             Don’t have an account?
             <Link
-              to="/register"
+              to="/registration"
               className="text-green-600 font-semibold ml-1 cursor-pointer"
             >
               Register
