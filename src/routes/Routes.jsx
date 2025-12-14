@@ -11,6 +11,11 @@ import ExtraSection from "../Pages/Extra/ExtraSection";
 import Dashboard from "../Pages/profile/Dashboard";
 import EditProfile from "../Pages/profile/EditProfile";
 import Payment from "../Pages/Payment/Payment";
+import CreatorDashboardLayOut from "../Pages/Dashboard/Creator/CreatorDashboardLayOut";
+import AddContest from "../Pages/Dashboard/Creator/AddContest";
+import MyCreatedContests from "../Pages/Dashboard/Creator/MyCreatedContests";
+import SubmittedTasks from "../Pages/Dashboard/Creator/SubmittedTasks";
+import EditContest from "../Pages/Dashboard/Creator/EditContest";
 
 
 export const router = createBrowserRouter([
@@ -69,6 +74,35 @@ export const router = createBrowserRouter([
           </Privateroute>
         ),
       },
+
+       {
+  path: "/dashboard/creator",
+  element: (
+    <Privateroute>
+      <CreatorDashboardLayOut />
+    </Privateroute>
+  ),
+  children: [
+    {
+      path: "add-contest",
+      element: <AddContest />,
+    },
+    {
+      path: "my-contests",
+      element: <MyCreatedContests />,
+    },
+    {
+      path: "submissions/:contestId",
+      element: <SubmittedTasks />,
+    },
+    {
+      path: "edit-contest/:id",
+      element: <EditContest />,
+    },
+      ],
+    },
+
+
       { path: "*",
        element: <NotFoundPage />
       },
