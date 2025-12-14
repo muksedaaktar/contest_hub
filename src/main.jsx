@@ -6,6 +6,7 @@ import './index.css'
 import App from './App.jsx'
 import { router } from './routes/Routes.jsx';
 import { AuthProvider } from './context/Authcontext.jsx';
+import { Toaster } from 'react-hot-toast';
 
 
 const queryClient = new QueryClient();
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <QueryClientProvider client={queryClient}> 
       <AuthProvider>
         <RouterProvider router={router} />
+        <Toaster position="top-right" reverseOrder={false} />
       </AuthProvider>
     </QueryClientProvider>
      

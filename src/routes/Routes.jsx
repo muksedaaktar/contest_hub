@@ -10,6 +10,7 @@ import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 import ExtraSection from "../Pages/Extra/ExtraSection";
 import Profile from "../Pages/profile/Profile";
 import EditProfile from "../Pages/profile/EditProfile";
+import Payment from "../Pages/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,15 @@ export const router = createBrowserRouter([
        element: (
        <Privateroute>
         <EditProfile />
+       </Privateroute>
+        ),
+       },
+
+       {
+        path: "/payment",
+        element: (
+       <Privateroute>
+        <Payment />
        </Privateroute>
         ),
        },

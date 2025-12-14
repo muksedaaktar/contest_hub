@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
 const fetchContests = async () => {
   const res = await fetch("/data/Contests.json");
@@ -11,12 +12,14 @@ const fetchContests = async () => {
 const ContestDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["contest-details"],
     queryFn: fetchContests,
-    staleTime: 1000 * 60 * 5,
   });
+
+  const contest = data?.find((c) => c.id === Number(id)) || null;
 
   const [isRegistered, setIsRegistered] = useState(false);
   const [participants, setParticipants] = useState(0);
@@ -24,22 +27,39 @@ const ContestDetails = () => {
   const [submission, setSubmission] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const contest = data?.find((c) => c.id === Number(id)) || null;
   const deadline = contest ? new Date(contest.deadline) : null;
   const isEnded = deadline ? new Date() > deadline : false;
 
-  // Countdown timer
+  /* ---------------- TIMER ---------------- */
   useEffect(() => {
     if (!contest || isEnded) return;
-    const updateTime = () => setTimeLeft(deadline - new Date());
+
+    const updateTime = () => {
+      setTimeLeft(deadline - new Date());
+    };
+
     updateTime();
     const timer = setInterval(updateTime, 1000);
     return () => clearInterval(timer);
   }, [contest, deadline, isEnded]);
 
+  /* ---------------- INITIAL PARTICIPANTS ---------------- */
   useEffect(() => {
-    if (contest) setParticipants(contest.participants || 0);
+    if (contest) {
+      setParticipants(contest.participants || 0);
+    }
   }, [contest]);
+
+  /* ---------------- PAYMENT SUCCESS HANDLER ---------------- */
+  useEffect(() => {
+    if (
+      location.state?.paymentSuccess &&
+      location.state?.contestId === contest?.id
+    ) {
+      setIsRegistered(true);
+      setParticipants((prev) => prev + 1);
+    }
+  }, [location.state, contest]);
 
   const formatTime = (ms) => {
     if (ms <= 0) return "Contest Ended";
@@ -50,24 +70,35 @@ const ContestDetails = () => {
     return `${d}d ${h}h ${m}m ${s}s`;
   };
 
+  /* ---------------- REGISTER → PAYMENT ---------------- */
   const handleRegister = () => {
-    setIsRegistered(true);
-    setParticipants((prev) => prev + 1);
-    navigate("/payment");
+    navigate("/payment", {
+      state: { contestId: contest.id },
+    });
   };
 
+  /* ---------------- SUBMIT TASK ---------------- */
   const handleSubmitTask = () => {
-    alert("Task Submitted Successfully!");
-    setSubmission("");
-    setShowModal(false);
-  };
+  if (!submission.trim()) {
+    toast.error("Please provide a valid submission link!");
+    return;
+  }
 
+  toast.success("🎉 Task submitted successfully!");
+  setSubmission("");
+  setShowModal(false);
+};
+
+  /* ---------------- UI ---------------- */
   return (
     <section className="bg-base-200 py-16">
       <div className="container mx-auto max-w-5xl px-5">
+
         {isLoading && <p className="text-center py-10">Loading...</p>}
         {error && <p className="text-center py-10">Error loading contest</p>}
-        {!isLoading && !contest && <p className="text-center py-10">Contest not found</p>}
+        {!isLoading && !contest && (
+          <p className="text-center py-10">Contest not found</p>
+        )}
 
         {contest && (
           <>
@@ -84,7 +115,8 @@ const ContestDetails = () => {
                 <p><strong>Participants:</strong> {participants}</p>
                 <p><strong>Prize:</strong> {contest.prize}</p>
                 <p className={isEnded ? "text-red-500" : "text-green-600"}>
-                  <strong>Status:</strong> {isEnded ? "Contest Ended" : "Ongoing"}
+                  <strong>Status:</strong>{" "}
+                  {isEnded ? "Contest Ended" : "Ongoing"}
                 </p>
               </div>
 
@@ -92,19 +124,20 @@ const ContestDetails = () => {
                 ⏳ {formatTime(timeLeft)}
               </p>
 
-              {/* Contest Details */}
               <h2 className="text-xl font-semibold mb-2">Contest Details</h2>
               <p className="text-gray-700 mb-6">{contest.details}</p>
 
-              {/* Task Section */}
               {contest.task && (
                 <>
-                  <h2 className="text-xl font-semibold mb-2">📝 Task Instructions</h2>
-                  <p className="text-gray-700 mb-6 whitespace-pre-line">{contest.task}</p>
+                  <h2 className="text-xl font-semibold mb-2">
+                    📝 Task Instructions
+                  </h2>
+                  <p className="text-gray-700 mb-6 whitespace-pre-line">
+                    {contest.task}
+                  </p>
                 </>
               )}
 
-              {/* Winner */}
               {contest.winner?.name && (
                 <div className="border-t pt-6 mt-6">
                   <h2 className="text-xl font-semibold mb-3">🏆 Winner</h2>
@@ -119,17 +152,21 @@ const ContestDetails = () => {
                 </div>
               )}
 
-              {/* Action Buttons */}
+              {/* ACTION BUTTONS */}
               <div className="flex flex-wrap gap-4 mt-8">
-                <button
-                  disabled={isEnded}
-                  onClick={handleRegister}
-                  className={`px-6 py-3 rounded-full text-white font-semibold ${
-                    isEnded ? "bg-gray-400 cursor-not-allowed" : "bg-orange-500 hover:bg-orange-600"
-                  }`}
-                >
-                  Register / Pay
-                </button>
+                {!isRegistered && (
+                  <button
+                    disabled={isEnded}
+                    onClick={handleRegister}
+                    className={`px-6 py-3 rounded-full text-white font-semibold ${
+                      isEnded
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-orange-500 hover:bg-orange-600"
+                    }`}
+                  >
+                    Register / Pay
+                  </button>
+                )}
 
                 {isRegistered && !isEnded && (
                   <button
@@ -145,11 +182,12 @@ const ContestDetails = () => {
         )}
       </div>
 
-      {/* Submit Modal */}
+      {/* SUBMIT MODAL */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl w-full max-w-md">
             <h3 className="text-xl font-semibold mb-4">Submit Your Task</h3>
+
             <textarea
               className="w-full border rounded-lg p-3 mb-4"
               rows="4"
@@ -157,6 +195,7 @@ const ContestDetails = () => {
               value={submission}
               onChange={(e) => setSubmission(e.target.value)}
             />
+
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setShowModal(false)}
@@ -164,6 +203,7 @@ const ContestDetails = () => {
               >
                 Cancel
               </button>
+
               <button
                 onClick={handleSubmitTask}
                 className="px-4 py-2 bg-green-500 text-white rounded-lg"

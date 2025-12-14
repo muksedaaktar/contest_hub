@@ -9,8 +9,8 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="navbar bg-base-200 relative">
-      <div className="navbar-start">
+    <div className="navbar bg-base-200 relative ">
+      <div className="navbar-start container mx-auto px-5">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
@@ -39,7 +39,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="navbar-end flex flex-col sm:flex-row gap-2 relative">
+      <div className="navbar-end container mx-auto px-5 flex flex-col sm:flex-row gap-2 relative">
         {!user ? (
           <>
             <NavLink 
