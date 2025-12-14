@@ -8,9 +8,10 @@ import Privateroute from "../privateRoute/Privateroute";
 import ContestsDetails from "../Pages/contestsDetails/ContestsDetails";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 import ExtraSection from "../Pages/Extra/ExtraSection";
-import Profile from "../Pages/profile/Profile";
+import Dashboard from "../Pages/profile/Dashboard";
 import EditProfile from "../Pages/profile/EditProfile";
 import Payment from "../Pages/Payment/Payment";
+
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
        path: "/profile",
        element: (
        <Privateroute>
-       <Profile />
+       <Dashboard />
       </Privateroute>
        ),
        },
