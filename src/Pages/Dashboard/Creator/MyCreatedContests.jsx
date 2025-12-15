@@ -31,17 +31,17 @@ const MyCreatedContests = () => {
                   <>
                     <button
                       onClick={() => navigate(`/dashboard/creator/edit-contest/${contest.id}`)}
-                      className="btn bg-orange-400 text-white hover:bg-orange-600"
+                      className=" text-white bg-amber-200 btn"
                     >
                       Edit
                     </button>
-                    <button className="btn bg-orange-400 hover:bg-orange-600 text-white">Delete</button>
+                    <button className="btn btn-error btn-sm text-white">Delete</button>
                   </>
                 )}
 
                 <button
                   onClick={() => navigate(`/dashboard/creator/submissions/${contest.id}`)}
-                  className="btn bg-orange-400 text-white hover:bg-orange-600"
+                  className="btn btn-success btn-sm text-white "
                 >
                   See Submissions
                 </button>
