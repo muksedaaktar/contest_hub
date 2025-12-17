@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../../../firebase/firebase.config";
-
 
 const Register = () => {
   const navigate = useNavigate();
@@ -21,23 +18,31 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        form.email,
-        form.password
-      );
-
-      // Update profile with name and photo
-      await updateProfile(userCredential.user, {
-        displayName: form.name,
-        photoURL: form.photoURL,
+      // Send data to backend API
+      const response = await fetch("http://localhost:5000/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          photoURL: form.photoURL,
+          password: form.password, // send plain password
+        }),
       });
 
-      // Redirect to home or dashboard
-      navigate("/");
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to register");
+      }
+
+      alert("User registered successfully!");
+      navigate("/login"); // redirect after registration
     } catch (error) {
       console.error(error.message);
-      alert(error.message); // simple error alert
+      alert(error.message);
     }
   };
 

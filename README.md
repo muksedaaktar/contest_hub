@@ -1,16 +1,37 @@
-# React + Vite
+# ContestHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site:** [inquisitive-biscochitos-0f8d86.netlify.app](#)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## React Compiler
+ContestHub is a dynamic contest management platform where users can participate in contests, track leaderboard rankings, and showcase their talents. It provides a secure, user-friendly experience for both contest creators and participants.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **User Authentication & Authorization**: Secure login and registration using JWT for protected routes.  
+- **Contest Management**: Create, update, delete, and approve contests dynamically.  
+- **Leaderboard**: Dynamic leaderboard ranking users by number of contest wins.  
+- **Participant Tracking**: Users can join contests and view their participation history.  
+- **Prize Management**: Track contest prize money and winners efficiently.  
+- **Pagination**: Display contests and users with pagination (10 items per page).  
+- **Dark/Light Theme Toggle**: Users can switch between dark and light themes; preferences persist after refresh.  
+- **Responsive Design**: Fully responsive UI that works on mobile, tablet, and desktop.  
+- **Forms with Validation**: All forms built using `react-hook-form` for better user input validation.  
+- **Profile Management**: Users can view and update their profile information securely.  
+- **Extra Routes**: Additional pages like “My Contests” and “Profile” for enhanced user experience.  
+
+---
+
+## Tech Stack
+
+- **Frontend**: React, TailwindCSS, react-hook-form, react-router-dom  
+- **Backend**: Node.js, Express.js, MongoDB  
+- **Authentication**: JWT (JSON Web Tokens)  
+- **Hosting/Deployment**: [Netlify]  
+
+---
+
