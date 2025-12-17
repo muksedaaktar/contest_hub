@@ -87,7 +87,7 @@ const Register = () => {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-black  placeholder-gray-400  bg-white "
                 placeholder="Enter your name"
                 required
               />
@@ -100,7 +100,7 @@ const Register = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-black  placeholder-gray-400  bg-white "
                 placeholder="Enter your email"
                 required
               />
@@ -113,7 +113,7 @@ const Register = () => {
                 name="photoURL"
                 value={form.photoURL}
                 onChange={handleChange}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-black  placeholder-gray-400  bg-white "
                 placeholder="Enter your profile photo URL"
               />
             </div>
@@ -125,7 +125,7 @@ const Register = () => {
                 name="password"
                 value={form.password}
                 onChange={handleChange}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-black  placeholder-gray-400  bg-white "
                 placeholder="Create a password"
                 required
               />
