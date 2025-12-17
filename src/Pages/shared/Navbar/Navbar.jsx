@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../../context/Authcontext';
 import logo from '../../../assets/winner.jpg';
+import { useTheme } from '../../../context/ThemeContext';
 
+
+  
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="navbar bg-base-200 relative ">
+    <div className="navbar bg-base-200 relative">
       <div className="navbar-start container mx-auto px-5">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +23,7 @@ const Navbar = () => {
           </div>
           <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
             <li><NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Home</NavLink></li>
-            <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
+            <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contests</NavLink></li>
             <li><NavLink to="/extra" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Extra Section</NavLink></li>
           </ul>
         </div>
@@ -34,7 +38,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Home</NavLink></li>
-          <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contest</NavLink></li>
+          <li><NavLink to="/all-contests" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>All Contests</NavLink></li>
           <li><NavLink to="/extra" className={({ isActive }) => isActive ? "text-blue-500 font-bold" : ""}>Extra Section</NavLink></li>
         </ul>
       </div>
@@ -59,7 +63,7 @@ const Navbar = () => {
           <div className="relative">
             {/* Profile picture */}
             <img 
-              src={user.photoURL || "https://i.ibb.co.com/zVH6VWx6/profile.jpg"} 
+              src={user.photoURL || "https://i.ibb.co/zVH6VWx6/profile.jpg"} 
               alt={user.displayName || "Profile"} 
               className="w-10 h-10 rounded-full cursor-pointer border-2 border-blue-500"
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -76,6 +80,13 @@ const Navbar = () => {
                 >
                   Dashboard
                 </NavLink>
+                <NavLink
+                  to="/leaderboard"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  Leaderboard
+                </NavLink>
                 <button 
                   onClick={() => { logout(); setDropdownOpen(false); }} 
                   className="w-full text-left px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-600"
@@ -87,8 +98,17 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
+       <button
+        onClick={toggleTheme}
+        className="ml-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg"
+      >
+        {theme === "light" ? "🌞 Light" : "🌙 Dark"}
+      </button>
+
     </div>
   );
 };
+
 
 export default Navbar;

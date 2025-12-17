@@ -19,6 +19,7 @@ import EditContest from "../Pages/Dashboard/Creator/EditContest";
 import AdminDashBoardLayout from "../Pages/Dashboard/Admin/AdminDashBoardLayout";
 import ManageUsers from "../Pages/Dashboard/Admin/ManageUsers";
 import ManageContests from "../Pages/Dashboard/Admin/ManageContests";
+import Leaderboard from "../Pages/profile/LeaderBoard";
 
 
 
@@ -48,6 +49,14 @@ export const router = createBrowserRouter([
        element: (
        <Privateroute>
        <Dashboard />
+      </Privateroute>
+       ),
+       },
+      {
+       path: "/leaderboard",
+       element: (
+       <Privateroute>
+       <Leaderboard />
       </Privateroute>
        ),
        },
