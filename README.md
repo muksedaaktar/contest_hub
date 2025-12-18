@@ -1,6 +1,6 @@
 # ContestHub
 
-**Live Site:** https://inquisitive-biscochitos-0f8d86.netlify.app
+**Live Site:** https://charming-crostata-4c4e16.netlify.app
 
 ---
 
